@@ -4,6 +4,7 @@ from django.contrib import auth
 from django.core.context_processors import csrf
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
 
 def index(request):
     return HttpResponse("<h2>HEY!</h2>")
@@ -25,7 +26,11 @@ def authHandlerView(request):
         return HttpResponseRedirect('/myapp/invalid')
 
 def logoutView(request):
-    pass
+    logout(request)
+    return HttpResponseRedirect('/myapp/loggedout')
+
+def loggedoutView(request):
+    return HttpResponse("<h2>Logged Out Succesfully</h2>")
 
 @login_required
 def securedView(request):

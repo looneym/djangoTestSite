@@ -12,6 +12,8 @@ urlpatterns = [
     url(r'^auth/$', views.authHandlerView, name='authHandlerView'),
 
     url(r'^logout/$', views.logoutView, name='logoutView'),
+    url(r'^loggedout/$', views.loggedoutView, name='loggedoutView'),
+
     url(r'^loggedin/$', views.loggedinView, name='loggedinView'),
     url(r'^invalid/$', views.invalidView, name='invalidView'),
 
