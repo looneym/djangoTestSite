@@ -8,7 +8,7 @@ urlpatterns = [
     url(r'^signupHandler/$', views.signupHandlerView, name='signupHandlerView'),
     url(r'^welcome/$', views.signupLandingView, name='signupLandingView'),
 
-    url(r'^login/', views.loginView, name='loginView'),
+    url(r'^login/$', views.loginView, name='loginView'),
     url(r'^auth/$', views.authHandlerView, name='authHandlerView'),
 
     url(r'^logout/$', views.logoutView, name='logoutView'),

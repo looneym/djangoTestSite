@@ -32,7 +32,8 @@ def logoutView(request):
 def loggedoutView(request):
     return HttpResponse("<h2>Logged Out Succesfully</h2>")
 
-@login_required
+@login_required(redirect_field_name="")
+# @login_required
 def securedView(request):
     return HttpResponse("<h2>Secured urL</h2>")
 
